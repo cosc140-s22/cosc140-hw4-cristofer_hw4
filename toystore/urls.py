@@ -15,7 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include, reverse_lazy
+from products import views 
+from django.conf import settings
+from django.conf.urls.static import static
+from django.shortcuts import redirect
+
+def root_redirect(request):
+  return redirect(reverse_lazy('index'))
+  
+
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+  path('',root_redirect), path('admin/',admin.site.urls),
+               path('products/',views.index,name='index'),
+  path('products/<int:product_id>',views.show,name='show')
 ]
+urlpatterns+= static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
