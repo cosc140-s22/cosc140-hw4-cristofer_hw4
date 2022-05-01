@@ -9,5 +9,9 @@
 
 ## Feedback
 
-Once you commit and submit your work to Github, I'll update this section with feedback.
+N
+
+Your index and show templates should inherit from the base template and not have the duplicate boilerplate HTML stuff;  at the top of your index template, for example, you should be able to say `{% extends 'base.html' %}` and then just override block(s) as appropriate from the base.  
+
+Everything works well and looks good; just the template inheritance needs to be fixed.
 
