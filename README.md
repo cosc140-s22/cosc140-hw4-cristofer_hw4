@@ -15,3 +15,8 @@ Your index and show templates should inherit from the base template and not have
 
 Everything works well and looks good; just the template inheritance needs to be fixed.
 
+===
+
+S
+
+Nice work - template inheritance looks good now!
